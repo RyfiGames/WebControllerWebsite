@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Web Controller</title>
+    <script src="https://cdn.socket.io/socket.io-2.0.1.js"></script>
+    <!-- <script src="https://cdn.socket.io/4.1.2/socket.io.js"></script> -->
+    <script defer src="main.js"></script>
+    <script defer src="controller.js"></script>
+    <script defer src="gamepads.js"></script>
+</head>
+
+<body>
+    <div id="joinScreen">
+        <h1>Join a Game</h1>
+        <input id="username" placeholder="Username" />
+        <input id="pin" placeholder="Game Pin" />
+        <button id="joinButton">Join</button>
+    </div>
+    <div id="waitScreen" hidden>
+        <h1>Waiting for the host to accept...</h1>
+    </div>
+    <div id="premiumScreen" hidden>
+        <h1>How would you like to join?</h1>
+        <button id="controllerButton">Just Controller</button>
+        <button id="screenshareButton">Just Screenshare</button>
+        <button id="bothButton">Both</button>
+    </div>
+    <div id="screenshare" hidden>
+        <video id="remoteVideo" controls style="width: 50%; height: 50%;"></video>
+    </div>
+    <div id="controlScreen" hidden>
+        <canvas id="canvas" name="game"></canvas>
+        <!-- <button id="leaveButton">Leave</button> -->
+    </div>
+    <div id="disconnectScreen" hidden>
+        <h1>Disconnected</h1>
+        <p id="disconnectReason">Reason for disconnect unknown</p>
+    </div>
+</body>
+
+</html>

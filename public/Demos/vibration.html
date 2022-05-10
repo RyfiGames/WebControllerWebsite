@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Vibration Test</title>
+    </head>
+    <body>
+        <input id="lengthInput" placeholder="Duration"/>
+        <button id="submitButton">Submit</button>
+        <script>
+            const lengthInput = document.getElementById('lengthInput');
+            const submitButton = document.getElementById('submitButton');
+            submitButton.addEventListener('click', () => {
+                window.navigator.vibrate(lengthInput.value);
+            });
+        </script>
+    </body>
+</html>
